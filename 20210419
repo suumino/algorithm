@@ -1,0 +1,20 @@
+def ccc(a, b):
+  r = a % b
+  while r != 0:
+    a = b
+    b = r
+    r = a % b
+  print("최대공약수는 %d" %b)
+
+ccc(12, 8)
+ccc(221, 143)
+
+
+
+def euclid(x, y):
+  if x % y == 0:
+    return y
+  return euclid(x, x % y)
+
+print(euclid(12, 8))
+print(euclid(221, 143))
